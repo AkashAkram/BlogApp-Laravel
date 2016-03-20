@@ -1,6 +1,6 @@
 @extends('app')
 @section('title')
-    <title>Blogrer BD</title>
+    <title>Blogger BD</title>
 @endsection
 @section('style')
     <style type="text/css">

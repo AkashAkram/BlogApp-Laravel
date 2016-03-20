@@ -1,6 +1,6 @@
 @extends('app')
 @section('title')
-    <title>Blogrer BD</title>
+    <title>Blogger BD | Home </title>
 @endsection
 @section('style')
     <style type="text/css">
@@ -25,7 +25,7 @@
             <div class="col-md-3 margin ">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        test
+                        <span>Side Bar</span>
                     </div>
                     <div class="panel-body">
 
