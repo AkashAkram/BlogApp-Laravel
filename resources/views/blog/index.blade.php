@@ -10,10 +10,6 @@
         li{
             text-align: center;
         }
-        .margin{
-            margin-left: 20px;
-            margin-right: auto;
-        }
 
 
     </style>
@@ -22,23 +18,14 @@
     <div class="container">
         <div class="row" >
 
-            <div class="col-md-3 margin ">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <span>Side Bar</span>
-                    </div>
-                    <div class="panel-body">
-
-                    </div>
-                </div>
-            </div>
+            
 
 
-            <div class="col-md-8">
+            <div class="col-md-9">
                 @foreach($blogs as $blog)
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h3><a href="../post/{!! $blog->id !!}">{!! $blog->title !!}</a></h3>
+                            <h4><a href="../post/{!! $blog->id !!}">{!! $blog->title !!}</a></h4>
 
                             @if(!Auth::guest())
                                 @if(strtoupper($blog->author)==strtoupper(Auth::user()->name))
@@ -55,14 +42,33 @@
                             @endif
                         </div>
                         <div class="panel-body">
-                                   Posted by :{!! $blog->author !!}<br>
-                                   Post time :{!! $blog->created_at !!}<br><br>
-                                   {!! substr($blog->body,0,390) !!}.....<br>
+
+                                        Posted by :{!! $blog->author !!}<br>
+                                        Post time :{!! $blog->created_at !!}<br><br>
+                                          {!! substr($blog->body,0,390) !!}.....<br>
                                    <a href="../post/{!! $blog->id !!}">Read full Article</a>
+    
                         </div>
                     </div>
-            @endforeach
-        </div>
+                @endforeach
+                
+                <div align="center">
+                    {!! $blogs->render() !!}
+                </div>
+
+            </div>
+
+            
+             <div class="col-md-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <span>Side Bar</span>
+                    </div>
+                    <div class="panel-body">
+                        
+                    </div>
+                </div>
+            </div>
 
 
         </div>

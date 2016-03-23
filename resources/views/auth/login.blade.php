@@ -25,10 +25,10 @@
 
 
 
-            <div class="col-md-12">
+            <div class="col-md-7 centering" >
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h3></h3>
+                            <h3>Login Page </h3>
 
                          
                         </div>
@@ -39,14 +39,14 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label">E-Mail Address</label>
                             <div class="col-md-6">
-                                <input type="email" class="form-control" name="email" value="{{ old('email') }}">
+                                <input type="email" class="form-control" name="email" value="{{ old('email') }}" required>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="col-md-4 control-label">Password</label>
                             <div class="col-md-6">
-                                <input type="password" class="form-control" name="password">
+                                <input type="password" class="form-control" name="password" required>
                             </div>
                         </div>
 
@@ -66,7 +66,7 @@
                                     Login
                                 </button>
 
-                                <a href="/password/email">Forgot Your Password?</a>
+                                <a href="/password/email"><br>Forgot Your Password?</a>
                             </div>
                         </div>
                     </form>
@@ -77,15 +77,8 @@
 
 
         </div>
+
     </div>
-
-
-
-
-
-
-
-
 
     </div>
 @endsection

@@ -48,7 +48,7 @@
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
 							<li><a href="/myblog/">{{ Auth::user()->name }}'s Blog</a></li>
-							<li><a href="/profile/{{ Auth::user()->name }}">Account settings</a></li>
+							<li><a href="#">Account settings</a></li>
 							<li><a href="/auth/logout">Logout</a></li>
 						</ul>
 					</li>
@@ -64,8 +64,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <footer class="navbar-default panel-footer container">
-	<br><br>
-	&copy; Akash Akram<br><br><br>
+	Akash Akram &copy; 2016
 </footer>
 </body>
 </html>

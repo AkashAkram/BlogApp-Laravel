@@ -2,7 +2,7 @@
 @section('title')
     <style type="text/css">
         .post{
-            width: 440px;
+            width: 339px;
             height: 150px;
         }
     </style>
@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Hello, {{ Auth::user()->name }}</div>
+                    <div class="panel-heading"><h4>Hello, {{ Auth::user()->name }}</h4></div>
 
                     <div class="panel-body">
                         Create New Blog

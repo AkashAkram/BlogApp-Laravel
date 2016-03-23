@@ -24,9 +24,10 @@ class BlogController extends Controller {
 	 */
 	public function index()
 	{
-		$user = Auth::user();
-		$blogs = Article::orderBy('id', 'desc')->get();
-		return view('blog.index',compact('blogs','user'));
+		
+		$blogs = Article::orderBy('id', 'desc')->paginate(2);
+		//$blogs = Article::paginate(2);
+		return view('blog.index',compact('blogs'));
 	}
 
 	/**
@@ -50,6 +51,13 @@ class BlogController extends Controller {
 	{
 		$this->middleware('auth');
 		$blog = Request::All();
+
+		if (Input::hasFile('avatar'))
+		{
+		    $file = Input::file('avatar');
+		    $file->move('/storage/img/', $file->getClientOriginalName());
+		}
+
 		Article::create($blog);
 		return redirect('/');
 	}
@@ -73,7 +81,9 @@ class BlogController extends Controller {
 	{
 		$this->middleware('auth');
 		$name = Auth::user()->name;
-		$blogs = Article::where('author', $name)->orderBy('created_at', 'desc')->get();
+		$blogs = Article::where('author', $name)->orderBy('created_at', 'desc')->paginate(2);
+		//$blogs = Article::;
+
 		//return view('blog.myblog',compact('blogs'));
 		return view('blog.index',compact('blogs'));
 	}

@@ -25,10 +25,10 @@
 
 
 
-            <div class="col-md-12">
+            <div class="col-md-7 centering">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h3></h3>
+                            <h3>Join Now</h3>
 
                          
                         </div>
@@ -74,7 +74,6 @@
                     </form>
                         </div>
                     </div>
-
             </div>
 
 
