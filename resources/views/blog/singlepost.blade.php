@@ -20,7 +20,8 @@
 
 
 
-            <div class="col-md-9">
+            <div class="center">
+                           <div class="col-md-9">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                              <h4><a href="../post/{!! $blog->id !!}">{!! $blog->title !!}</a></h4>
@@ -32,7 +33,7 @@
                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="caret"></span></a>
                                             <ul class="dropdown-menu" role="menu">
                                                 <li><a href="../edit/post/{!! $blog->id !!}">Edit post</a></li>
-                                                <li><a href="/remove/post/{!! $blog->id !!}">Remove post</a></li>
+                                                <li><a href="../remove/post/{!! $blog->id !!}">Remove post</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -49,7 +50,7 @@
             </div>
 
 
-            <div class="col-md-2 ">
+            <div class="col-md-3">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         Side Bar
@@ -58,11 +59,10 @@
                     </div>
                 </div>
             </div>
+            </div>
+
 
 
         </div>
-    </div>
-
-
     </div>
 @endsection

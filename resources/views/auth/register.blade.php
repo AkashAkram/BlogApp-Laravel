@@ -10,10 +10,6 @@
         li{
             text-align: center;
         }
-        .margin{
-            margin-left: 20px;
-            margin-right: auto;
-        }
 
 
 
@@ -25,7 +21,7 @@
 
 
 
-            <div class="col-md-7 centering">
+            <div class="center">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h3>Join Now</h3>

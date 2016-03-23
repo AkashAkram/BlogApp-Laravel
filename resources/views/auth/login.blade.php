@@ -10,11 +10,6 @@
         li{
             text-align: center;
         }
-        .margin{
-            margin-left: 20px;
-            margin-right: auto;
-        }
-
 
 
     </style>
@@ -24,8 +19,8 @@
         <div class="row">
 
 
-
-            <div class="col-md-7 centering" >
+            <div class="">
+                            <div class="center" >
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h3>Login Page </h3>
@@ -66,12 +61,14 @@
                                     Login
                                 </button>
 
-                                <a href="/password/email"><br>Forgot Your Password?</a>
+                                <a href="/password/email"><br></a>
                             </div>
                         </div>
                     </form>
                         </div>
                     </div>
+
+            </div>
 
             </div>
 

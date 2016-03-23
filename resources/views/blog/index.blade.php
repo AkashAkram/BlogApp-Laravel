@@ -17,8 +17,9 @@
 @section('content')
     <div class="container">
         <div class="row" >
+            <div class="center">
+               
 
-            
 
 
             <div class="col-md-9">
@@ -34,7 +35,7 @@
                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="caret"></span></a>
                                             <ul class="dropdown-menu" role="menu">
                                                 <li><a href="../edit/post/{!! $blog->id !!}">Edit post</a></li>
-                                                <li><a href="/remove/post/{!! $blog->id !!}">Remove post</a></li>
+                                                <li><a href="../remove/post/{!! $blog->id !!}">Remove post</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -45,8 +46,12 @@
 
                                         Posted by :{!! $blog->author !!}<br>
                                         Post time :{!! $blog->created_at !!}<br><br>
-                                          {!! substr($blog->body,0,390) !!}.....<br>
+                                          {!! substr($blog->body,0,300) !!}
+
+                                 <!-- if(strln( $blog->body )>300)--> 
+                                    .....<br>
                                    <a href="../post/{!! $blog->id !!}">Read full Article</a>
+                                 <!-- endif--> 
     
                         </div>
                     </div>
@@ -58,29 +63,22 @@
 
             </div>
 
-            
-             <div class="col-md-2">
+              <div class="col-md-3">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <span>Side Bar</span>
+                        Side Bar
                     </div>
                     <div class="panel-body">
-                        
                     </div>
                 </div>
             </div>
+          
 
 
         </div>
-    </div>
 
-
-
-
-
-
-
-
+            </div>
+        </div>
 
     </div>
 @endsection
